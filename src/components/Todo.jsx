@@ -93,7 +93,7 @@ function todo() {
           {task.map((currTask, index) => (
             <li
               key={index}
-              className="todo-item flex justify-between items-center bg-gray-100 p-3 rounded-md shadow-sm"
+              className="todo-item group flex justify-between items-center bg-gray-100 p-3 rounded-md shadow-sm"
             >
               <span
                 className={`text-lg text-gray-700 ${
@@ -102,7 +102,7 @@ function todo() {
               >
                 {currTask.content}
               </span>
-              <div className="flex space-x-2">
+              <div className="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <button
                   className="bg-green-500 text-white p-2 rounded-full hover:bg-green-600"
                   aria-label="Mark as completed"
